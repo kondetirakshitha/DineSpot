@@ -1,0 +1,156 @@
+*{
+  margin: 0;
+  border: 0;
+}
+.preferences-page {
+  min-height: 100vh;
+  background: #0B0505;
+  color: #D4D4D3;
+}
+
+.preferences-content {
+  width: min(100% - 40px, 1000px);
+  margin: 0 auto;
+  padding: 110px 0 55px;
+}
+
+.preferences-content h1 {
+  margin: 0 0 10px;
+  color: #F0EAEA;
+  font-size: clamp(28px, 4vw, 38px);
+}
+
+.preferences-content > p {
+  margin: 0 0 30px;
+  color: #A09F9F;
+  line-height: 1.7;
+}
+
+.preferences-form {
+  display: grid;
+  gap: 20px;
+}
+
+.preference-section {
+  padding: 23px;
+  border: 1px solid #302020;
+  border-radius: 13px;
+  background: #151111;
+}
+
+.preference-section h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: #E9E4E4;
+}
+
+.preference-section > p {
+  margin: 0 0 18px;
+  color: #A09F9F;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.preference-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.preference-chip {
+  padding: 10px 15px;
+  border: 1px solid #403030;
+  border-radius: 8px;
+  background: #1B1313;
+  color: #D4D4D3;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.preference-chip:hover,
+.preference-chip.selected {
+  border-color: #B03637;
+  background: #B03637;
+  color: #FFFFFF;
+}
+
+.preference-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.preference-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 15px;
+  border: 1px solid #403030;
+  border-radius: 9px;
+  background: #1B1313;
+  cursor: pointer;
+}
+
+.preference-option:has(input:checked) {
+  border-color: #B03637;
+  background: #281111;
+}
+
+.preference-option input {
+  margin-top: 4px;
+  accent-color: #B03637;
+}
+
+.preference-option span {
+  display: grid;
+  gap: 5px;
+}
+
+.preference-option strong {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.preference-option small {
+  color: #A09F9F;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.save-preferences {
+  justify-self: start;
+  padding: 13px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #B03637;
+  color: white;
+  font-size: 14px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.save-preferences:hover {
+  background: #8F292A;
+  transform: translateY(-2px);
+}
+
+.preferences-status {
+  color: #D4D4D3;
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .preferences-content {
+    width: calc(100% - 30px);
+    padding-top: 95px;
+  }
+
+  .preference-section {
+    padding: 18px;
+  }
+
+  .preference-options {
+    grid-template-columns: 1fr;
+  }
+}

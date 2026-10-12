@@ -1,0 +1,197 @@
+
+.restaurant-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #292020;
+  border-radius: 13px;
+  background: #151111;
+  color: #D4D4D3;
+  cursor: pointer;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-4px);
+  border-color: #713030;
+}
+
+.restaurant-image {
+  position: relative;
+  width: 100%;
+  height: 165px;
+  overflow: hidden;
+  background: #211515;
+}
+
+.restaurant-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.restaurant-card:hover .restaurant-image img {
+  transform: scale(1.04);
+}
+
+.favorite-button {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  display: grid;
+  place-items: center;
+  width: 35px;
+  height: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  background: rgba(10, 5, 5, 0.78);
+  color: #E5DADA;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.favorite-button:hover,
+.favorite-button.favorite-active {
+  background: #B03637;
+  color: white;
+}
+
+.restaurant-info {
+  padding: 15px;
+}
+
+.restaurant-info h3 {
+  margin: 0 0 12px;
+  overflow-wrap: anywhere;
+  color: #F0EAEA;
+  font-size: 16px;
+  font-weight: 650;
+}
+
+.restaurant-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 13px;
+  color: #A09F9F;
+  font-size: 12px;
+}
+
+.restaurant-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.restaurant-meta span:first-child svg {
+  color: #E6B64C;
+}
+
+.match-badge {
+  display: inline-block;
+  margin-top: 13px;
+  padding: 5px 9px;
+  border-radius: 5px;
+  background: #B03637;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.compare-card-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  margin-top: 15px;
+  padding: 11px;
+  border: 1px solid #713030;
+  border-radius: 8px;
+  background: transparent;
+  color: #D4D4D3;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.compare-card-button:hover,
+.compare-card-button.compared {
+  background: #B03637;
+  color: white;
+}
+.restaurant-image-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #d4d4d3;
+  background: #160606;
+  overflow-wrap: anywhere;
+}
+
+/* DineSpot — Card Interaction Polish */
+
+.restaurant-card {
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.restaurant-card:hover {
+  border-color: #B03637;
+  box-shadow: 0 8px 24px rgba(176, 54, 55, 0.12);
+}
+
+.restaurant-card button {
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.restaurant-card button:hover {
+  transform: translateY(-1px);
+}
+
+.restaurant-card button:focus-visible {
+  outline: 2px solid #FF7777;
+  outline-offset: 3px;
+}
+
+.restaurant-card img {
+  transition: transform 0.35s ease;
+}
+
+.restaurant-card:hover .restaurant-image img {
+  transform: scale(1.04);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .restaurant-card,
+  .restaurant-card button,
+  .restaurant-card img {
+    transition: none;
+  }
+
+  .restaurant-card:hover {
+    transform: none;
+  }
+
+  .restaurant-card:hover .restaurant-image img {
+    transform: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .restaurant-image {
+    height: 190px;
+  }
+}

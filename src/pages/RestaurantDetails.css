@@ -1,0 +1,160 @@
+
+.restaurant-details {
+  min-height: 100vh;
+  background: #0B0505;
+  color: #D4D4D3;
+}
+
+.details-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 100px 35px 55px;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 22px;
+  padding: 10px 0;
+  border: none;
+  background: transparent;
+  color: #D4D4D3;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.back-button:hover {
+  color: #D14A4A;
+}
+
+.details-hero {
+  position: relative;
+  min-height: 340px;
+  overflow: hidden;
+  border: 1px solid #302020;
+  border-radius: 16px;
+  background: #151111;
+}
+
+.details-hero > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 35px;
+  background: linear-gradient(
+    0deg,
+    rgba(11, 5, 5, 0.98) 0%,
+    rgba(11, 5, 5, 0.5) 45%,
+    rgba(11, 5, 5, 0.04) 100%
+  );
+}
+
+.details-overlay h1 {
+  margin: 0 0 17px;
+  color: #FFFFFF;
+  font-size: clamp(28px, 4vw, 43px);
+}
+
+.details-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.details-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(21, 17, 17, 0.82);
+  color: #E7DEDE;
+  font-size: 13px;
+}
+
+.details-meta svg {
+  color: #D14A4A;
+}
+
+.details-info {
+  margin-top: 24px;
+  padding: 25px;
+  border: 1px solid #302020;
+  border-radius: 13px;
+  background: #151111;
+}
+
+.details-info h2 {
+  margin: 0 0 12px;
+  color: #F0EAEA;
+  font-size: 21px;
+}
+
+.details-info p {
+  color: #A09F9F;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.details-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.details-actions a,
+.details-actions button,
+.details-content > button:not(.back-button) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 17px;
+  border: 1px solid #713030;
+  border-radius: 8px;
+  background: #1B1111;
+  color: #D4D4D3;
+  font-size: 13px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.details-actions a:hover,
+.details-actions button:hover,
+.details-content > button:not(.back-button):hover {
+  border-color: #B03637;
+  background: #B03637;
+  color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+  .details-content {
+    padding: 90px 16px 35px;
+  }
+
+  .details-hero {
+    min-height: 300px;
+  }
+
+  .details-overlay {
+    padding: 20px;
+  }
+
+  .details-info {
+    padding: 19px;
+  }
+}

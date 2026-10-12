@@ -1,0 +1,88 @@
+.navbar {
+  width: 100%;
+  height: 65px;
+  background: #160606;
+  color: #A09F9F;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(176, 54, 55, 0.2);
+}
+.sidebar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+.spot {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 24px;
+  font-weight: 800;
+  color: #B03637;
+  cursor: pointer;
+}
+.dine{
+    display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 24px;
+  font-weight: 800;
+  color: #bab8b8;
+  cursor: pointer;
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 75px;
+}
+
+.nav-item {
+  background: none;
+  border: none;
+  outline: none;
+  color: #A09F9F;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.25s ease;
+}
+.nav-item:hover {
+  color: #d4d4d3;
+}
+.nav-item.active {
+  color: #B03637;
+  border-bottom: 2px solid #B03637;
+}
+.nav-icon {
+  font-size: 22px;
+}
+.sidebar-open {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .sidebar {
+    padding: 0 25px;
+  }
+  .nav-menu {
+    gap: 50px;
+  }
+  .nav-item {
+    font-size: 18px;
+  }
+  .logo-section span {
+    font-size: 22px;
+  }
+}
