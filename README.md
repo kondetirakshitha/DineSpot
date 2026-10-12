@@ -96,6 +96,8 @@ The backend should start at:
 ```text
 http://localhost:5000
 ```
+### Preview
+![DineSpot](screenshots/dinespot-preview.jpg)
 
 ### 5. Start the frontend
 
@@ -155,7 +157,7 @@ http://localhost:5000/api/restaurants?near=Chennai&query=restaurant&limit=10
 
 The goal of DineSpot is to make restaurant discovery easier and more enjoyable through search, personalized preferences, favorites, and restaurant comparison.
 
-## 👩 Author
+##  Author
 
 **Kondeti Rakshitha**
 
